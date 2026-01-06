@@ -1,0 +1,108 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .allocation-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .allocation-slider-container strong {
+    font-size: 14px;
+  }
+
+  .allocation-slider-container span {
+    font-size: 14px;
+  }
+
+  .allocation-slider-container input[type="range"] {
+    width: 100%;
+  }
+}
+/* ============================================
+   TOUCH‑FRIENDLY SLIDER (FULL REPLACEMENT)
+   ============================================ */
+
+/* Base track */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: #d1d5db; /* neutral gray */
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover (desktop only) */
+@media (hover: hover) {
+  input[type="range"]:hover {
+    background: #c4c9d1;
+  }
+}
+
+/* ------------------------------
+   Chrome / Safari / Edge Thumb
+   ------------------------------ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px; /* large touch target */
+  height: 28px;
+  border-radius: 50%;
+  background: #4f46e5; /* indigo */
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+/* Active thumb (tap/drag) */
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.15);
+  background: #4338ca; /* darker indigo */
+}
+
+/* ------------------------------
+   Firefox Thumb
+   ------------------------------ */
+input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #4f46e5;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.15);
+  background: #4338ca;
+}
+
+/* Firefox track */
+input[type="range"]::-moz-range-track {
+  height: 6px;
+  background: #d1d5db;
+  border-radius: 4px;
+}
+
+/* ============================================
+   MOBILE LAYOUT FOR SLIDER CONTAINER
+   ============================================ */
+@media (max-width: 600px) {
+  .allocation-slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .allocation-slider-container strong,
+  .allocation-slider-container span {
+    font-size: 14px;
+  }
+}
