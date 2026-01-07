@@ -1537,7 +1537,7 @@ export default function App() {
   // ------------------------------
   const [selectedStages, setSelectedStages] = useState<StageKey[]>([]);
   const [evPreference, setEvPreference] = useState(false);
-  const [chinaComfort, setChinaComfort] = useState<ChinaComfort>("medium");
+  const [chinaComfort, setChinaComfort] = useState<ChinaComfort>("neutral");
   const [riskTolerance, setRiskTolerance] = useState<RiskLevel>("medium");
   const [knowledge, setKnowledge] =
     useState<keyof typeof KnowledgeMode>("medium");
